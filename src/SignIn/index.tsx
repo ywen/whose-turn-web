@@ -8,13 +8,9 @@ import TextField from '../commons/TextField';
 import changeValue from './changeValue';
 import action from './action';
 import { RootState } from 'store';
-import firebase from 'firebase/app';
+import UserType from 'UserType';
 
-interface Params {
-  user: firebase.User | null;
-};
-
-const SignIn = ({ user }: Params) => {
+const SignIn = ({ user }: UserType) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const data = useSelector((state: RootState) => state.signUpData);
