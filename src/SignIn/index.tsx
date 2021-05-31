@@ -13,7 +13,7 @@ import UserType from 'UserType';
 const SignIn = ({ user }: UserType) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const data = useSelector((state: RootState) => state.signUpData);
+  const data = useSelector((state: RootState) => state.signInData);
   useEffect(() => {
     if (user) {
       navigate('/');
