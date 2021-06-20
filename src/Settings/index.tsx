@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
+import ButtonList from 'Components/ButtonList';
 
 import './index.scss';
+
 const Settings = () => {
+  const buttons = [
+    { link: '/settings/kids', label: 'Kids', buttonClass: 'settings__kids-button' },
+  ];
   return (
-    <ul className='settings__menu-container'>
-      <li className='settings__menu--item'><Link to='/settings/kids' className='settings__menu-button'>Kids</Link></li>
-    </ul>
+    <ButtonList buttons={buttons} />
   );
 };
 
