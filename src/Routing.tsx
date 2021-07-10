@@ -9,6 +9,7 @@ import SignIn from './SignIn';
 import Home from './Home';
 import Settings from './Settings';
 import Kids from './Settings/Kids';
+import AddKid from './Settings/Kids/Add';
 import AuthenticatedArea from './AuthenticatedArea';
 import UserType from 'UserType';
 
@@ -22,6 +23,7 @@ const Routing = ({ user }: UserType) => {
           <Route path='/home' element={<Home />} />
           <Route path='/settings' element={<Settings />} />
           <Route path='/settings/kids' element={<Kids />} />
+          <Route path='/settings/kids/add' element={<AddKid />} />
         </Route>
       </Routes>
     </BrowserRouter>
