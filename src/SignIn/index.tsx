@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
 import './index.scss'
-import TextField from '../commons/TextField';
+import TextField from 'Components/TextField';
 
 import changeValue from './changeValue';
 import action from './action';

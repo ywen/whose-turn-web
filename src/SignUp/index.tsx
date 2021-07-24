@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import TextField from '../commons/TextField';
+import TextField from 'Components/TextField';
 
 import './index.scss'
 
