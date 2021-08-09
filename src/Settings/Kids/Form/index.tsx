@@ -1,7 +1,8 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import TextField from 'Components/TextField';
 import { RootState } from 'store';
 import changeValue from './changeValue';
+import './index.scss';
 
 const Form = () => {
   const data = useSelector((state: RootState) => state.kidsFormData);
