@@ -28,7 +28,7 @@ const Button = ({ button }: SingleButtonType) => {
 const ButtonList = ({ buttons }: Params) => {
   return (
     <div className='button-list__menu-container'>
-      {buttons.map((button: ButtonType) => <Button button={button} />)}
+      {buttons.map((button: ButtonType) => <Button button={button} key={`${button.label}-key`} />)}
     </div>
   );
 };

@@ -27,7 +27,6 @@ const getKey = () => keyStore()?.get();
 
 type SaveToParams = { doc: Function, data: any };
 const saveTo = async ({ doc, data }: SaveToParams) => {
-  console.log(currentUser()?.uid);
   const snapshot = await doc().get();
   if (!snapshot.exists) {
     await doc().set({});
@@ -53,6 +52,7 @@ const publicMethods = {
   getKey,
   setKey,
   saveKid,
+  kidsStore,
 };
 
 export default publicMethods;
