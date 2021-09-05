@@ -7,3 +7,13 @@
     top: 1rem;
   }
 };
+
+.kids-list {
+  &__container {
+    list-style: none;
+  };
+
+  &__kid {
+    font-size: 3rem;
+  };
+}

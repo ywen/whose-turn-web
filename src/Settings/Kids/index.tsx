@@ -14,9 +14,9 @@ const Kids = () => {
   ];
   return (
     <div>
-      <ul>
+      <ul className='kids-list__container'>
         {kids.map(kid => (
-          <li key={kid.id}>{kid.name} - {kid.points}</li>
+          <li className='kids-list__kid' key={kid.id}>{kid.name} - {kid.points}</li>
         ))}
       </ul>
       <ButtonList buttons={buttons} />
