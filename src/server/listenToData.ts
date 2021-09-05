@@ -6,6 +6,10 @@ const storesAndDispatchTypes = [
     storeFunc: store.kidsStore,
     dispatchType: 'KIDS_CHANGED',
   },
+  {
+    storeFunc: store.choresStore,
+    dispatchType: 'CHORES_CHANGED',
+  },
 ];
 
 const listenToData = ({ dispatch }) => {

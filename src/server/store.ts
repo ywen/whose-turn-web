@@ -4,6 +4,7 @@ import { v4 as uuid } from 'uuid';
 
 import currentUser from './currentUser';
 import KidType from 'commons/KidType';
+import ChoreType from 'commons/ChoreType';
 
 const db = () => firebase.firestore();
 const collection = () => {
@@ -22,6 +23,7 @@ const toDoc = ({ name }: ToDocParams) => collection()?.doc(name);
 const keyStore = () => toDoc({ name: 'key '});
 
 const kidsStore = () => toDoc({ name: 'kids' });
+const choresStore = () => toDoc({ name: 'chores' });
 
 const getKey = () => keyStore()?.get();
 
@@ -41,6 +43,9 @@ const saveTo = async ({ doc, data }: SaveToParams) => {
 const saveKid = async (kid: KidType) => {
   await saveTo({ doc: kidsStore, data: kid });
 }
+const saveChore = async (chore: ChoreType) => {
+  await saveTo({ doc: choresStore, data: chore });
+}
 
 interface KeyParams {
   key: string;
@@ -52,7 +57,9 @@ const publicMethods = {
   getKey,
   setKey,
   saveKid,
+  saveChore,
   kidsStore,
+  choresStore,
 };
 
 export default publicMethods;
