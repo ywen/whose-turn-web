@@ -24,6 +24,7 @@ const keyStore = () => toDoc({ name: 'key '});
 
 const kidsStore = () => toDoc({ name: 'kids' });
 const choresStore = () => toDoc({ name: 'chores' });
+const choresKidsStore = () => toDoc({ name: 'choresKids' });
 
 const getKey = () => keyStore()?.get();
 
@@ -60,6 +61,7 @@ const publicMethods = {
   saveChore,
   kidsStore,
   choresStore,
+  choresKidsStore,
 };
 
 export default publicMethods;

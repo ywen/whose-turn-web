@@ -5,6 +5,7 @@ import kidsFormData from './Settings/Kids/Form/data';
 import choresFormData from './Settings/Chores/Form/data';
 import kids from './kids';
 import chores from './chores';
+import choresKids from './choreKid';
 
 const reducers = combineReducers({
   signUpData,
@@ -13,6 +14,7 @@ const reducers = combineReducers({
   choresFormData,
   kids,
   chores,
+  choresKids,
 });
 
 export type RootState = ReturnType<typeof reducers>;
