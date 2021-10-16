@@ -1,11 +1,3 @@
-interface Params {
-  dispatch: Function;
-  key: string;
-  value: string;
-};
+import makeChangeValueFunc from 'commons/makeChangeValueFun';
 
-const changeValue = ({ dispatch, key, value }: Params) => {
-  dispatch({ type: 'SIGN_IN_VALUE_CHANGED', key, value });
-}
-
-export default changeValue;
+export default makeChangeValueFunc({ type: 'SIGN_IN_VALUE_CHANGED' });
